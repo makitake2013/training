@@ -18,9 +18,17 @@ package sample.action;
 import org.seasar.struts.annotation.Execute;
 
 public class IndexAction {
-	
-    @Execute(validator = false)
+
+	public String text;
+
+	@Execute(validator = false)
 	public String index() {
-        return "index.jsp";
+		return "index.jsp";
+	}
+
+	@Execute(validator = false)
+	public String submit() {
+		text = text + "-submit";
+		return "index.jsp";
 	}
 }

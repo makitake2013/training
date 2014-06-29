@@ -1,9 +1,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Dolteng Auto Generated</title>
+<title>sample-page</title>
 </head>
 <body>
-<h1>Hello World!</h1>
+<html:errors/>
+<s:form>
+<html:text property="text"/>
+<input type="submit" name="submit" value="Submit"/>
+</s:form>
 </body>
 </html>
