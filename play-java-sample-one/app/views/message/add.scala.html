@@ -1,0 +1,17 @@
+@(msg: String, form1: Form[models.Message], memberOpts: List[Tuple2[String,String]])
+
+@main("Sample Page") {
+
+	<h1>Add Message</h1>
+	<p>@msg</p>
+	@helper.form(action = routes.MessageController.create) {
+	 	@(helper.inputText (
+	 		field = form1("name")
+		))
+		@(helper.textarea (
+	 		field = form1("message")
+		))
+
+	 	<input type = "submit">
+ 	}
+}

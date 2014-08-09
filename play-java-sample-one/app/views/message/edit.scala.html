@@ -1,0 +1,25 @@
+@(msg: String, form1: Form[models.Message])
+
+@main("Sample Page") {
+
+	<h1>Update Message</h1>
+	<p>@msg</p>
+	@helper.form(action = routes.MessageController.update) {
+		<input type = "hidden" value = "@form1("id").value" name = "id" />
+
+	 	@(helper.inputText (
+	 		field = form1("name")
+		))
+	 	@(helper.inputText (
+	 		field = form1("mail")
+		))
+		@(helper.textarea (
+	 		field = form1("message")
+		))
+		@(helper.inputText (
+	 		field = form1("url")
+		))
+		
+		<input type = "submit">		
+ 	}
+}

@@ -1,0 +1,29 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                          controllers.Application.index()
+GET     /member                    controllers.MemberController.index()
+GET     /message                   controllers.MessageController.index()
+
+GET     /member/add                controllers.MemberController.add()
+POST    /member/create             controllers.MemberController.create()
+GET     /member/item               controllers.MemberController.setItem()
+POST    /member/edit               controllers.MemberController.edit()
+POST    /member/update             controllers.MemberController.update()
+GET     /member/delete             controllers.MemberController.delete()
+POST    /member/remove             controllers.MemberController.remove()
+GET     /member/find               controllers.MemberController.find()
+
+GET     /message/add                controllers.MessageController.add()
+POST    /message/create             controllers.MessageController.create()
+GET     /message/item               controllers.MessageController.setItem()
+POST    /message/edit               controllers.MessageController.edit()
+POST    /message/update             controllers.MessageController.update()
+GET     /message/delete             controllers.MessageController.delete()
+POST    /message/remove             controllers.MessageController.remove()
+GET     /message/find               controllers.MessageController.find()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

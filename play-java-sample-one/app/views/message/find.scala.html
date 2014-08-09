@@ -1,0 +1,16 @@
+@(msg: String, form1: Form[MessageController.FindForm], datas: List[models.Message])
+
+@main("Sample Page") {
+
+	<h1>Find Message</h1>
+	<p>@msg</p>
+	@helper.form(action = routes.MessageController.find) {
+	 	@(helper.inputText (
+	 		field = form1("condition")
+		))
+	 	<input type = "submit">
+ 	}
+ 	
+ 	<hr>
+ 	<p>@datas</p>
+}

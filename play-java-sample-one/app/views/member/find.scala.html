@@ -1,0 +1,17 @@
+@(msg: String, form1: Form[MemberController.FindForm], datas: List[models.Member])
+
+@main("Sample Page") {
+
+	<h1>Find Member</h1>
+	<p>@msg</p>
+	@helper.form(action = routes.MemberController.find) {
+	 	@(helper.inputText (
+	 		field = form1("condition")
+		))
+		
+	 	<input type = "submit">
+ 	}
+ 	
+ 	<hr>
+ 	<p>@datas</p>
+}
